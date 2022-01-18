@@ -1,0 +1,21 @@
+2021-10-26T11:10:58.341367800255-11:10:58 **** Incremental Build of configuration Debug for project shared_bram_mb ****
+000-make all 
+000-'Building file: ../src/main.c'
+000-'Invoking: MicroBlaze gcc compiler'
+000-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -ID:/FPGA_Projects/Workspace/shared_bram_wrapper/export/shared_bram_wrapper/sw/shared_bram_wrapper/domain_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+000-'Finished building: ../src/main.c'
+000-' '
+000-'Building target: shared_bram_mb.elf'
+000-'Invoking: MicroBlaze gcc linker'
+000-mb-gcc -Wl,-T -Wl,../src/lscript.ld -LD:/FPGA_Projects/Workspace/shared_bram_wrapper/export/shared_bram_wrapper/sw/shared_bram_wrapper/domain_microblaze_0/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "shared_bram_mb.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+000-'Finished building target: shared_bram_mb.elf'
+000-' '
+000-'Invoking: MicroBlaze Print Size'
+000-mb-size shared_bram_mb.elf  |tee "shared_bram_mb.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000-   2016	    272	   3096	   5384	   1508	shared_bram_mb.elf
+000-'Finished building: shared_bram_mb.elf.size'
+000-' '
+00255-
+11:11:00 Build Finished (took 2s.628ms)
+

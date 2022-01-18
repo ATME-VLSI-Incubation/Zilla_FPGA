@@ -1,0 +1,25 @@
+2021-10-26T11:11:07.846377200255-11:11:07 **** Incremental Build of configuration Debug for project shared_bram_zynq ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000-' '
+000-make --no-print-directory main-build
+000-'Building file: ../src/main.c'
+000-'Invoking: ARM v7 gcc compiler'
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/FPGA_Projects/Workspace/shared_bram_wrapper_1/export/shared_bram_wrapper_1/sw/shared_bram_wrapper_1/domain_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+000-'Finished building: ../src/main.c'
+000-' '
+000-'Building target: shared_bram_zynq.elf'
+000-'Invoking: ARM v7 gcc linker'
+000-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/FPGA_Projects/Workspace/shared_bram_wrapper_1/export/shared_bram_wrapper_1/sw/shared_bram_wrapper_1/domain_ps7_cortexa9_0/bsplib/lib -o "shared_bram_zynq.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+000-'Finished building target: shared_bram_zynq.elf'
+000-' '
+000-'Invoking: ARM v7 Print Size'
+000-arm-none-eabi-size shared_bram_zynq.elf  |tee "shared_bram_zynq.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000-  20036	   1160	  22600	  43796	   ab14	shared_bram_zynq.elf
+000-'Finished building: shared_bram_zynq.elf.size'
+000-' '
+00255-
+11:11:12 Build Finished (took 4s.409ms)
+

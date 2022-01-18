@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="MicroBlaze-Uart" location="D:/FPGA_Projects/Workspace/MicroBlaze-Uart" platform="D:/FPGA_Projects/Workspace/MicroBlaze_Uartlite_wrapper/export/MicroBlaze_Uartlite_wrapper/MicroBlaze_Uartlite_wrapper.xpfm" platformUID="xilinx:arty-a7-100::0.0(custom)" systemProject="MicroBlaze-Uart_system" sysConfig="MicroBlaze_Uartlite_wrapper" runtime="cpp" cpu="domain_microblaze_0" cpuInstance="microblaze_0" os="standalone" mssSignature="03ac03bfd468acb6d8d7da7f622ef6f8">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.706940027">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.1608447320" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

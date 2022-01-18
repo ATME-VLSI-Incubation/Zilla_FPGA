@@ -1,0 +1,26 @@
+2022-01-18T18:42:02.269218700255-18:42:02 **** Build of configuration Debug for project MicroBlaze-Uart ****
+000-make all 
+000-'Building file: ../src/helloworld.c'
+000-'Invoking: MicroBlaze gcc compiler'
+000-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -ID:/FPGA_Projects/Workspace/MicroBlaze_Uartlite_wrapper/export/MicroBlaze_Uartlite_wrapper/sw/MicroBlaze_Uartlite_wrapper/domain_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+000-'Finished building: ../src/helloworld.c'
+000-' '
+000-'Building file: ../src/platform.c'
+000-'Invoking: MicroBlaze gcc compiler'
+000-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -ID:/FPGA_Projects/Workspace/MicroBlaze_Uartlite_wrapper/export/MicroBlaze_Uartlite_wrapper/sw/MicroBlaze_Uartlite_wrapper/domain_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+000-'Finished building: ../src/platform.c'
+000-' '
+000-'Building target: MicroBlaze-Uart.elf'
+000-'Invoking: MicroBlaze gcc linker'
+000-mb-gcc -Wl,-T -Wl,../src/lscript.ld -LD:/FPGA_Projects/Workspace/MicroBlaze_Uartlite_wrapper/export/MicroBlaze_Uartlite_wrapper/sw/MicroBlaze_Uartlite_wrapper/domain_microblaze_0/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MicroBlaze-Uart.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+000-'Finished building target: MicroBlaze-Uart.elf'
+000-' '
+000-'Invoking: MicroBlaze Print Size'
+000-mb-size MicroBlaze-Uart.elf  |tee "MicroBlaze-Uart.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000-   2248	    296	   3072	   5616	   15f0	MicroBlaze-Uart.elf
+000-'Finished building: MicroBlaze-Uart.elf.size'
+000-' '
+00255-
+18:42:03 Build Finished (took 989ms)
+

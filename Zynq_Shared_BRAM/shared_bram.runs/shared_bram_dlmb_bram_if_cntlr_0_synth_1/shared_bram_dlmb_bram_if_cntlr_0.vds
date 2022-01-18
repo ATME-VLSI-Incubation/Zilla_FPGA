@@ -1,0 +1,296 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Oct 22 17:11:07 2021
+# Process ID: 28197
+# Current directory: /home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.runs/shared_bram_dlmb_bram_if_cntlr_0_synth_1
+# Command line: vivado -log shared_bram_dlmb_bram_if_cntlr_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source shared_bram_dlmb_bram_if_cntlr_0.tcl
+# Log file: /home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.runs/shared_bram_dlmb_bram_if_cntlr_0_synth_1/shared_bram_dlmb_bram_if_cntlr_0.vds
+# Journal file: /home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.runs/shared_bram_dlmb_bram_if_cntlr_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+INFO: [Common 17-1460] Use of init.tcl in /home/sgeuser30/.Xilinx/Vivado/init.tcl is deprecated. Please use Vivado_init.tcl 
+Sourcing tcl script '/home/sgeuser30/.Xilinx/Vivado/init.tcl'
+source shared_bram_dlmb_bram_if_cntlr_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2153.668 ; gain = 2.020 ; free physical = 5476 ; free virtual = 445075
+Command: synth_design -top shared_bram_dlmb_bram_if_cntlr_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 31651
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:26 . Memory (MB): peak = 2276.398 ; gain = 120.586 ; free physical = 1138 ; free virtual = 435668
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'shared_bram_dlmb_bram_if_cntlr_0' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ip/shared_bram_dlmb_bram_if_cntlr_0/synth/shared_bram_dlmb_bram_if_cntlr_0.vhd:84]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_HIGHADDR bound to: 64'b0000000000000000000000000000000000000000000000000011111111111111 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_INTERCONNECT bound to: 0 - type: integer 
+	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
+	Parameter C_CE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_UE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_STATUS_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_REGISTER bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 1 - type: integer 
+	Parameter C_CE_COUNTER_WIDTH bound to: 0 - type: integer 
+	Parameter C_WRITE_ACCESS bound to: 2 - type: integer 
+	Parameter C_BRAM_AWIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_bram_if_cntlr' declared at '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/246e/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3134' bound to instance 'U0' of component 'lmb_bram_if_cntlr' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ip/shared_bram_dlmb_bram_if_cntlr_0/synth/shared_bram_dlmb_bram_if_cntlr_0.vhd:226]
+INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/246e/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3259]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_HIGHADDR bound to: 64'b0000000000000000000000000000000000000000000000000011111111111111 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_INTERCONNECT bound to: 0 - type: integer 
+	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
+	Parameter C_CE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_UE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_STATUS_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_REGISTER bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 1 - type: integer 
+	Parameter C_CE_COUNTER_WIDTH bound to: 0 - type: integer 
+	Parameter C_WRITE_ACCESS bound to: 2 - type: integer 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_BRAM_AWIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_BASEADDR bound to: 32'b11111111111111111111111111111111 
+	Parameter C_S_AXI_CTRL_HIGHADDR bound to: 32'b00000000000000000000000000000000 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_mux' declared at '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/246e/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2527' bound to instance 'lmb_mux_I' of component 'lmb_mux' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/246e/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3511]
+INFO: [Synth 8-638] synthesizing module 'lmb_mux' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/246e/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2614]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_AW bound to: 32 - type: integer 
+	Parameter C_BAR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+INFO: [Synth 8-3491] module 'pselect_mask' declared at '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/246e/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2110' bound to instance 'pselect_mask_lmb' of component 'pselect_mask' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/246e/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2681]
+INFO: [Synth 8-638] synthesizing module 'pselect_mask' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/246e/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2125]
+	Parameter C_AW bound to: 32 - type: integer 
+	Parameter C_BAR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'pselect_mask' (1#1) [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/246e/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2125]
+INFO: [Synth 8-256] done synthesizing module 'lmb_mux' (2#1) [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/246e/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2614]
+INFO: [Synth 8-256] done synthesizing module 'lmb_bram_if_cntlr' (3#1) [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/246e/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3259]
+INFO: [Synth 8-256] done synthesizing module 'shared_bram_dlmb_bram_if_cntlr_0' (4#1) [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ip/shared_bram_dlmb_bram_if_cntlr_0/synth/shared_bram_dlmb_bram_if_cntlr_0.vhd:84]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:39 . Memory (MB): peak = 2319.309 ; gain = 163.496 ; free physical = 1799 ; free virtual = 435398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:41 . Memory (MB): peak = 2334.148 ; gain = 178.336 ; free physical = 1723 ; free virtual = 435387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:41 . Memory (MB): peak = 2334.148 ; gain = 178.336 ; free physical = 1723 ; free virtual = 435387
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2334.148 ; gain = 0.000 ; free physical = 1540 ; free virtual = 435253
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ip/shared_bram_dlmb_bram_if_cntlr_0/shared_bram_dlmb_bram_if_cntlr_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ip/shared_bram_dlmb_bram_if_cntlr_0/shared_bram_dlmb_bram_if_cntlr_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.runs/shared_bram_dlmb_bram_if_cntlr_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.runs/shared_bram_dlmb_bram_if_cntlr_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2459.961 ; gain = 0.000 ; free physical = 1151 ; free virtual = 433636
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:02 . Memory (MB): peak = 2465.898 ; gain = 5.938 ; free physical = 1157 ; free virtual = 433549
+rdi::get_data_dir: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 2465.898 ; gain = 0.000 ; free physical = 11477 ; free virtual = 431078
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:02:07 . Memory (MB): peak = 2465.898 ; gain = 310.086 ; free physical = 11899 ; free virtual = 431656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:02:07 . Memory (MB): peak = 2465.898 ; gain = 310.086 ; free physical = 11892 ; free virtual = 431646
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  /home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.runs/shared_bram_dlmb_bram_if_cntlr_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:02:07 . Memory (MB): peak = 2465.898 ; gain = 310.086 ; free physical = 11859 ; free virtual = 431624
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:02:08 . Memory (MB): peak = 2465.898 ; gain = 310.086 ; free physical = 11752 ; free virtual = 431554
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:02:10 . Memory (MB): peak = 2465.898 ; gain = 310.086 ; free physical = 11543 ; free virtual = 431413
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:02:23 . Memory (MB): peak = 2465.898 ; gain = 310.086 ; free physical = 10031 ; free virtual = 430380
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:02:23 . Memory (MB): peak = 2465.898 ; gain = 310.086 ; free physical = 10034 ; free virtual = 430383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:02:23 . Memory (MB): peak = 2465.898 ; gain = 310.086 ; free physical = 10000 ; free virtual = 430352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:02:27 . Memory (MB): peak = 2465.898 ; gain = 310.086 ; free physical = 9577 ; free virtual = 430002
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:02:27 . Memory (MB): peak = 2465.898 ; gain = 310.086 ; free physical = 9577 ; free virtual = 430002
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:02:27 . Memory (MB): peak = 2465.898 ; gain = 310.086 ; free physical = 9577 ; free virtual = 430002
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:02:27 . Memory (MB): peak = 2465.898 ; gain = 310.086 ; free physical = 9577 ; free virtual = 430002
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:02:27 . Memory (MB): peak = 2465.898 ; gain = 310.086 ; free physical = 9576 ; free virtual = 430001
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:02:27 . Memory (MB): peak = 2465.898 ; gain = 310.086 ; free physical = 9575 ; free virtual = 430001
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT2 |     3|
+|2     |LUT3 |     4|
+|3     |FDRE |     2|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:02:27 . Memory (MB): peak = 2465.898 ; gain = 310.086 ; free physical = 9575 ; free virtual = 430001
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:02:07 . Memory (MB): peak = 2465.898 ; gain = 178.336 ; free physical = 9598 ; free virtual = 430030
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:02:27 . Memory (MB): peak = 2465.898 ; gain = 310.086 ; free physical = 9598 ; free virtual = 430031
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2465.898 ; gain = 0.000 ; free physical = 9908 ; free virtual = 430361
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2488.852 ; gain = 0.000 ; free physical = 10533 ; free virtual = 431012
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:02:47 . Memory (MB): peak = 2488.852 ; gain = 335.184 ; free physical = 10700 ; free virtual = 431182
+INFO: [Common 17-1381] The checkpoint '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.runs/shared_bram_dlmb_bram_if_cntlr_0_synth_1/shared_bram_dlmb_bram_if_cntlr_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP shared_bram_dlmb_bram_if_cntlr_0, cache-ID = 53018c16c1892e31
+INFO: [Common 17-1381] The checkpoint '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.runs/shared_bram_dlmb_bram_if_cntlr_0_synth_1/shared_bram_dlmb_bram_if_cntlr_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file shared_bram_dlmb_bram_if_cntlr_0_utilization_synth.rpt -pb shared_bram_dlmb_bram_if_cntlr_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 22 17:15:03 2021...

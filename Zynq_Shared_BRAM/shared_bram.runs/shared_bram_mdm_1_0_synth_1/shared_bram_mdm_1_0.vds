@@ -1,0 +1,545 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Oct 22 17:11:07 2021
+# Process ID: 28185
+# Current directory: /home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.runs/shared_bram_mdm_1_0_synth_1
+# Command line: vivado -log shared_bram_mdm_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source shared_bram_mdm_1_0.tcl
+# Log file: /home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.runs/shared_bram_mdm_1_0_synth_1/shared_bram_mdm_1_0.vds
+# Journal file: /home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.runs/shared_bram_mdm_1_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+INFO: [Common 17-1460] Use of init.tcl in /home/sgeuser30/.Xilinx/Vivado/init.tcl is deprecated. Please use Vivado_init.tcl 
+Sourcing tcl script '/home/sgeuser30/.Xilinx/Vivado/init.tcl'
+source shared_bram_mdm_1_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2153.664 ; gain = 2.020 ; free physical = 5476 ; free virtual = 445075
+Command: synth_design -top shared_bram_mdm_1_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 31641
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:26 . Memory (MB): peak = 2282.426 ; gain = 126.617 ; free physical = 1138 ; free virtual = 435668
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'shared_bram_mdm_1_0' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ip/shared_bram_mdm_1_0/synth/shared_bram_mdm_1_0.vhd:74]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
+	Parameter C_USE_BSCAN bound to: 0 - type: integer 
+	Parameter C_BSCANID bound to: 76547328 - type: integer 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_AVOID_PRIMITIVES bound to: 0 - type: integer 
+	Parameter C_INTERCONNECT bound to: 2 - type: integer 
+	Parameter C_MB_DBG_PORTS bound to: 1 - type: integer 
+	Parameter C_USE_UART bound to: 0 - type: integer 
+	Parameter C_DBG_REG_ACCESS bound to: 0 - type: integer 
+	Parameter C_DBG_MEM_ACCESS bound to: 0 - type: integer 
+	Parameter C_USE_CROSS_TRIGGER bound to: 0 - type: integer 
+	Parameter C_EXT_TRIG_RESET_VALUE bound to: 20'b11110001001000110100 
+	Parameter C_TRACE_OUTPUT bound to: 0 - type: integer 
+	Parameter C_TRACE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TRACE_CLK_FREQ_HZ bound to: 200000000 - type: integer 
+	Parameter C_TRACE_CLK_OUT_PHASE bound to: 90 - type: integer 
+	Parameter C_TRACE_ASYNC_RESET bound to: 0 - type: integer 
+	Parameter C_TRACE_PROTOCOL bound to: 1 - type: integer 
+	Parameter C_TRACE_ID bound to: 110 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_ADDR_SIZE bound to: 32 - type: integer 
+	Parameter C_DATA_SIZE bound to: 32 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_M_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_ID_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'MDM' declared at '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:12605' bound to instance 'U0' of component 'MDM' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ip/shared_bram_mdm_1_0/synth/shared_bram_mdm_1_0.vhd:1655]
+INFO: [Synth 8-638] synthesizing module 'MDM' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:14260]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
+	Parameter C_USE_BSCAN bound to: 0 - type: integer 
+	Parameter C_BSCANID bound to: 76547328 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_AVOID_PRIMITIVES bound to: 0 - type: integer 
+	Parameter C_INTERCONNECT bound to: 2 - type: integer 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_MB_DBG_PORTS bound to: 1 - type: integer 
+	Parameter C_DBG_REG_ACCESS bound to: 0 - type: integer 
+	Parameter C_DBG_MEM_ACCESS bound to: 0 - type: integer 
+	Parameter C_USE_UART bound to: 0 - type: integer 
+	Parameter C_USE_CROSS_TRIGGER bound to: 0 - type: integer 
+	Parameter C_EXT_TRIG_RESET_VALUE bound to: 20'b11110001001000110100 
+	Parameter C_TRACE_OUTPUT bound to: 0 - type: integer 
+	Parameter C_TRACE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TRACE_ASYNC_RESET bound to: 0 - type: integer 
+	Parameter C_TRACE_CLK_FREQ_HZ bound to: 200000000 - type: integer 
+	Parameter C_TRACE_CLK_OUT_PHASE bound to: 90 - type: integer 
+	Parameter C_TRACE_PROTOCOL bound to: 1 - type: integer 
+	Parameter C_TRACE_ID bound to: 110 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_ADDR_SIZE bound to: 32 - type: integer 
+	Parameter C_DATA_SIZE bound to: 32 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_M_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_ID_WIDTH bound to: 7 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter DISABLE_JTAG bound to: FALSE - type: string 
+	Parameter JTAG_CHAIN bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'MB_BSCANE2' declared at '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:311' bound to instance 'BSCAN_I' of component 'MB_BSCANE2' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:15865]
+INFO: [Synth 8-638] synthesizing module 'MB_BSCANE2' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:335]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter DISABLE_JTAG bound to: FALSE - type: string 
+	Parameter JTAG_CHAIN bound to: 2 - type: integer 
+	Parameter DISABLE_JTAG bound to: FALSE - type: string 
+	Parameter JTAG_CHAIN bound to: 2 - type: integer 
+INFO: [Synth 8-113] binding component instance 'BSCANE2_I' to cell 'BSCANE2' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:345]
+INFO: [Synth 8-256] done synthesizing module 'MB_BSCANE2' (1#1) [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:335]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-3491] module 'MB_LUT1' declared at '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:1459' bound to instance 'LUT1_I' of component 'MB_LUT1' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:15883]
+INFO: [Synth 8-638] synthesizing module 'MB_LUT1' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:1473]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 2'b10 
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'LUT1' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:1495]
+INFO: [Synth 8-256] done synthesizing module 'MB_LUT1' (2#1) [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:1473]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_BUFG' declared at '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:373' bound to instance 'BUFG_DRCK' of component 'MB_BUFG' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:16351]
+INFO: [Synth 8-638] synthesizing module 'MB_BUFG' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:386]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'BUFG' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:396]
+INFO: [Synth 8-256] done synthesizing module 'MB_BUFG' (3#1) [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:386]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
+	Parameter C_USE_BSCAN bound to: 0 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_MB_DBG_PORTS bound to: 1 - type: integer 
+	Parameter C_EN_WIDTH bound to: 1 - type: integer 
+	Parameter C_DBG_REG_ACCESS bound to: 0 - type: integer 
+	Parameter C_REG_NUM_CE bound to: 4 - type: integer 
+	Parameter C_REG_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_DBG_MEM_ACCESS bound to: 0 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_USE_CROSS_TRIGGER bound to: 0 - type: integer 
+	Parameter C_EXT_TRIG_RESET_VALUE bound to: 20'b11110001001000110100 
+	Parameter C_USE_UART bound to: 0 - type: integer 
+	Parameter C_UART_WIDTH bound to: 8 - type: integer 
+	Parameter C_TRACE_OUTPUT bound to: 0 - type: integer 
+	Parameter C_TRACE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TRACE_ASYNC_RESET bound to: 0 - type: integer 
+	Parameter C_TRACE_CLK_FREQ_HZ bound to: 200000000 - type: integer 
+	Parameter C_TRACE_CLK_OUT_PHASE bound to: 90 - type: integer 
+	Parameter C_TRACE_PROTOCOL bound to: 1 - type: integer 
+	Parameter C_TRACE_ID bound to: 110 - type: integer 
+	Parameter C_M_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_ID_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'MDM_Core' declared at '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:5724' bound to instance 'MDM_Core_I1' of component 'MDM_Core' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:16449]
+INFO: [Synth 8-638] synthesizing module 'MDM_Core' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:6961]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
+	Parameter C_USE_BSCAN bound to: 0 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_MB_DBG_PORTS bound to: 1 - type: integer 
+	Parameter C_EN_WIDTH bound to: 1 - type: integer 
+	Parameter C_DBG_REG_ACCESS bound to: 0 - type: integer 
+	Parameter C_REG_NUM_CE bound to: 4 - type: integer 
+	Parameter C_REG_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_DBG_MEM_ACCESS bound to: 0 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_USE_CROSS_TRIGGER bound to: 0 - type: integer 
+	Parameter C_EXT_TRIG_RESET_VALUE bound to: 20'b11110001001000110100 
+	Parameter C_USE_UART bound to: 0 - type: integer 
+	Parameter C_UART_WIDTH bound to: 8 - type: integer 
+	Parameter C_TRACE_OUTPUT bound to: 0 - type: integer 
+	Parameter C_TRACE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TRACE_ASYNC_RESET bound to: 0 - type: integer 
+	Parameter C_TRACE_CLK_FREQ_HZ bound to: 200000000 - type: integer 
+	Parameter C_TRACE_CLK_OUT_PHASE bound to: 90 - type: integer 
+	Parameter C_TRACE_PROTOCOL bound to: 1 - type: integer 
+	Parameter C_TRACE_ID bound to: 110 - type: integer 
+	Parameter C_M_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_ID_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'xil_scan_reset_control' declared at '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:287' bound to instance 'config_scan_reset_i' of component 'xil_scan_reset_control' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:7644]
+INFO: [Synth 8-638] synthesizing module 'xil_scan_reset_control' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:296]
+INFO: [Synth 8-256] done synthesizing module 'xil_scan_reset_control' (4#1) [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:296]
+INFO: [Synth 8-3491] module 'xil_scan_reset_control' declared at '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:287' bound to instance 'sel_n_reset_i' of component 'xil_scan_reset_control' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:7654]
+INFO: [Synth 8-3491] module 'xil_scan_reset_control' declared at '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:287' bound to instance 'shift_n_reset_i' of component 'xil_scan_reset_control' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:7664]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_USE_BSCAN bound to: 0 - type: integer 
+	Parameter C_MB_DBG_PORTS bound to: 1 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_DBG_REG_ACCESS bound to: 0 - type: integer 
+	Parameter C_DBG_MEM_ACCESS bound to: 0 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_USE_CROSS_TRIGGER bound to: 0 - type: integer 
+	Parameter C_EXT_TRIG_RESET_VALUE bound to: 20'b11110001001000110100 
+	Parameter C_USE_UART bound to: 0 - type: integer 
+	Parameter C_UART_WIDTH bound to: 8 - type: integer 
+	Parameter C_TRACE_OUTPUT bound to: 0 - type: integer 
+	Parameter C_TRACE_PROTOCOL bound to: 1 - type: integer 
+	Parameter C_EN_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'JTAG_CONTROL' declared at '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:3007' bound to instance 'JTAG_CONTROL_I' of component 'JTAG_CONTROL' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:10355]
+INFO: [Synth 8-638] synthesizing module 'JTAG_CONTROL' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:3280]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_USE_BSCAN bound to: 0 - type: integer 
+	Parameter C_MB_DBG_PORTS bound to: 1 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_DBG_REG_ACCESS bound to: 0 - type: integer 
+	Parameter C_DBG_MEM_ACCESS bound to: 0 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_USE_CROSS_TRIGGER bound to: 0 - type: integer 
+	Parameter C_EXT_TRIG_RESET_VALUE bound to: 20'b11110001001000110100 
+	Parameter C_USE_UART bound to: 0 - type: integer 
+	Parameter C_UART_WIDTH bound to: 8 - type: integer 
+	Parameter C_TRACE_OUTPUT bound to: 0 - type: integer 
+	Parameter C_TRACE_PROTOCOL bound to: 1 - type: integer 
+	Parameter C_EN_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'xil_scan_reset_control' declared at '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:287' bound to instance 'config_with_scan_reset_i' of component 'xil_scan_reset_control' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:3589]
+INFO: [Synth 8-3491] module 'xil_scan_reset_control' declared at '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:287' bound to instance 'sel_with_scan_reset_i' of component 'xil_scan_reset_control' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:3597]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDC_1' declared at '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:672' bound to instance 'FDC_I' of component 'MB_FDC_1' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:3654]
+INFO: [Synth 8-638] synthesizing module 'MB_FDC_1' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:688]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDC_1' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:709]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDC_1' (5#1) [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:688]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDRE_1' declared at '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:731' bound to instance 'SYNC_FDRE' of component 'MB_FDRE_1' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:3664]
+INFO: [Synth 8-638] synthesizing module 'MB_FDRE_1' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:748]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDRE_1' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:771]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDRE_1' (6#1) [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:748]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0000000101100111 
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:794' bound to instance 'SRL16E_1' of component 'MB_SRL16E' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:3858]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:818]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0000000101100111 
+	Parameter INIT bound to: 16'b0000000101100111 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:822]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E' (7#1) [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:818]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0100001010000111 
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:794' bound to instance 'SRL16E_2' of component 'MB_SRL16E' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:3876]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized1' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:818]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0100001010000111 
+	Parameter INIT bound to: 16'b0100001010000111 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:822]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized1' (7#1) [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:818]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0100010001000011 
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:794' bound to instance 'SRL16E_ID_1' of component 'MB_SRL16E' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:3947]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized3' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:818]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0100010001000011 
+	Parameter INIT bound to: 16'b0100010001000011 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:822]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized3' (7#1) [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:818]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0101100001001101 
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:794' bound to instance 'SRL16E_ID_2' of component 'MB_SRL16E' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:3965]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized5' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:818]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0101100001001101 
+	Parameter INIT bound to: 16'b0101100001001101 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:822]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized5' (7#1) [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:818]
+INFO: [Synth 8-256] done synthesizing module 'JTAG_CONTROL' (8#1) [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:3280]
+INFO: [Synth 8-256] done synthesizing module 'MDM_Core' (9#1) [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:6961]
+INFO: [Synth 8-256] done synthesizing module 'MDM' (10#1) [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ipshared/e9fa/hdl/mdm_v3_2_vh_rfs.vhd:14260]
+INFO: [Synth 8-256] done synthesizing module 'shared_bram_mdm_1_0' (11#1) [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ip/shared_bram_mdm_1_0/synth/shared_bram_mdm_1_0.vhd:74]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:40 . Memory (MB): peak = 2345.336 ; gain = 189.527 ; free physical = 1840 ; free virtual = 435463
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:42 . Memory (MB): peak = 2360.176 ; gain = 204.367 ; free physical = 1640 ; free virtual = 435317
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:42 . Memory (MB): peak = 2360.176 ; gain = 204.367 ; free physical = 1640 ; free virtual = 435318
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2364.145 ; gain = 0.000 ; free physical = 1435 ; free virtual = 435194
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ip/shared_bram_mdm_1_0/shared_bram_mdm_1_0_ooc_trace.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ip/shared_bram_mdm_1_0/shared_bram_mdm_1_0_ooc_trace.xdc] for cell 'U0'
+Parsing XDC File [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ip/shared_bram_mdm_1_0/shared_bram_mdm_1_0.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ip/shared_bram_mdm_1_0/shared_bram_mdm_1_0.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.srcs/sources_1/bd/shared_bram/ip/shared_bram_mdm_1_0/shared_bram_mdm_1_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/shared_bram_mdm_1_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/shared_bram_mdm_1_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.runs/shared_bram_mdm_1_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.runs/shared_bram_mdm_1_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2520.988 ; gain = 0.000 ; free physical = 1143 ; free virtual = 433626
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  FDC_1 => FDCE (inverted pins: C): 1 instance 
+  FDRE_1 => FDRE (inverted pins: C): 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:02 . Memory (MB): peak = 2520.988 ; gain = 0.000 ; free physical = 1156 ; free virtual = 433548
+rdi::get_data_dir: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 2520.988 ; gain = 0.000 ; free physical = 11477 ; free virtual = 431078
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:02:07 . Memory (MB): peak = 2520.988 ; gain = 365.180 ; free physical = 11904 ; free virtual = 431657
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:02:07 . Memory (MB): peak = 2520.988 ; gain = 365.180 ; free physical = 11892 ; free virtual = 431646
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  /home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.runs/shared_bram_mdm_1_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:02:07 . Memory (MB): peak = 2520.988 ; gain = 365.180 ; free physical = 11859 ; free virtual = 431624
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:02:09 . Memory (MB): peak = 2520.988 ; gain = 365.180 ; free physical = 11658 ; free virtual = 431482
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 4     
+	   2 Input   10 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 3     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 23    
+	  12 Input    1 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:02:10 . Memory (MB): peak = 2520.988 ; gain = 365.180 ; free physical = 11406 ; free virtual = 431304
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:02:23 . Memory (MB): peak = 2520.988 ; gain = 365.180 ; free physical = 9946 ; free virtual = 430309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:02:24 . Memory (MB): peak = 2520.988 ; gain = 365.180 ; free physical = 9799 ; free virtual = 430166
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:02:24 . Memory (MB): peak = 2520.988 ; gain = 365.180 ; free physical = 9815 ; free virtual = 430187
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:02:28 . Memory (MB): peak = 2520.988 ; gain = 365.180 ; free physical = 10137 ; free virtual = 430597
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:02:28 . Memory (MB): peak = 2520.988 ; gain = 365.180 ; free physical = 10135 ; free virtual = 430595
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:02:28 . Memory (MB): peak = 2520.988 ; gain = 365.180 ; free physical = 10125 ; free virtual = 430585
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:02:28 . Memory (MB): peak = 2520.988 ; gain = 365.180 ; free physical = 10128 ; free virtual = 430588
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:02:28 . Memory (MB): peak = 2520.988 ; gain = 365.180 ; free physical = 10131 ; free virtual = 430593
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:02:28 . Memory (MB): peak = 2520.988 ; gain = 365.180 ; free physical = 10155 ; free virtual = 430616
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                 | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|MDM         | MDM_Core_I1/Use_BSCAN.Config_Reg_reg[26] | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|MDM         | MDM_Core_I1/Use_BSCAN.Config_Reg_reg[10] | 15     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|MDM         | MDM_Core_I1/Use_BSCAN.Config_Reg_reg[3]  | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++------------+------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BSCANE2 |     1|
+|2     |BUFG    |     1|
+|3     |LUT1    |     3|
+|4     |LUT2    |    13|
+|5     |LUT3    |    27|
+|6     |LUT4    |    15|
+|7     |LUT5    |    18|
+|8     |LUT6    |    34|
+|9     |SRL16E  |     7|
+|10    |FDCE    |   100|
+|11    |FDC     |     1|
+|12    |FDPE    |     7|
+|13    |FDRE    |     4|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:02:28 . Memory (MB): peak = 2520.988 ; gain = 365.180 ; free physical = 10168 ; free virtual = 430629
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:02:08 . Memory (MB): peak = 2520.988 ; gain = 204.367 ; free physical = 10214 ; free virtual = 430679
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:02:28 . Memory (MB): peak = 2520.988 ; gain = 365.180 ; free physical = 10210 ; free virtual = 430676
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2520.988 ; gain = 0.000 ; free physical = 10298 ; free virtual = 430769
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2520.988 ; gain = 0.000 ; free physical = 10671 ; free virtual = 431178
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  FDC_1 => FDCE (inverted pins: C): 1 instance 
+  FDRE_1 => FDRE (inverted pins: C): 1 instance 
+
+INFO: [Common 17-83] Releasing license: Synthesis
+71 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:02:48 . Memory (MB): peak = 2520.988 ; gain = 367.324 ; free physical = 10759 ; free virtual = 431273
+INFO: [Common 17-1381] The checkpoint '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.runs/shared_bram_mdm_1_0_synth_1/shared_bram_mdm_1_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP shared_bram_mdm_1_0, cache-ID = b0c240c8556c2d82
+INFO: [Coretcl 2-1174] Renamed 12 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.runs/shared_bram_mdm_1_0_synth_1/shared_bram_mdm_1_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file shared_bram_mdm_1_0_utilization_synth.rpt -pb shared_bram_mdm_1_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 22 17:15:05 2021...

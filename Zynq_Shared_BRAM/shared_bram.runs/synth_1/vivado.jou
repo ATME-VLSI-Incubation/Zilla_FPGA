@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Oct 25 20:08:11 2021
+# Process ID: 38963
+# Current directory: /home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.runs/synth_1
+# Command line: vivado -log shared_bram_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source shared_bram_wrapper.tcl
+# Log file: /home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.runs/synth_1/shared_bram_wrapper.vds
+# Journal file: /home/sgeuser30/Desktop/vybhav/FPGA/shared_memory/shared_bram/shared_bram.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source shared_bram_wrapper.tcl -notrace

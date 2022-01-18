@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1635172686">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BITSTR-SYSDEF" Name="shared_bram_wrapper.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="shared_bram_wrapper.ltx"/>
+  <File Type="BG-BGN" Name="shared_bram_wrapper.bgn"/>
+  <File Type="NPI_FILE" Name="shared_bram_wrapper.npi"/>
+  <File Type="BG-DRC" Name="shared_bram_wrapper.drc"/>
+  <File Type="RNPI_FILE" Name="shared_bram_wrapper.rnpi"/>
+  <File Type="CFI_FILE" Name="shared_bram_wrapper.cfi"/>
+  <File Type="RCFI_FILE" Name="shared_bram_wrapper.rcfi"/>
+  <File Type="PDI-FILE" Name="shared_bram_wrapper.pdi"/>
+  <File Type="BITSTR-MMI" Name="shared_bram_wrapper.mmi"/>
+  <File Type="BITSTR-BMM" Name="shared_bram_wrapper_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="shared_bram_wrapper.nky"/>
+  <File Type="BITSTR-RBT" Name="shared_bram_wrapper.rbt"/>
+  <File Type="BITSTR-MSK" Name="shared_bram_wrapper.msk"/>
+  <File Type="RBD_FILE" Name="shared_bram_wrapper.rbd"/>
+  <File Type="BG-BIN" Name="shared_bram_wrapper.bin"/>
+  <File Type="BG-BIT" Name="shared_bram_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="shared_bram_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="shared_bram_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="shared_bram_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="shared_bram_wrapper.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="shared_bram_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="shared_bram_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="shared_bram_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="shared_bram_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="shared_bram_wrapper_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW" Name="shared_bram_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="shared_bram_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="shared_bram_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="shared_bram_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="shared_bram_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="shared_bram_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="shared_bram_wrapper_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="shared_bram_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="shared_bram_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="shared_bram_wrapper_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="shared_bram_wrapper_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="shared_bram_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="shared_bram_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="shared_bram_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="shared_bram_wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="shared_bram_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="shared_bram_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="shared_bram_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="shared_bram_wrapper_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="shared_bram_wrapper_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="shared_bram_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="shared_bram_wrapper_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="shared_bram_wrapper_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="shared_bram_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="shared_bram_wrapper_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="shared_bram_wrapper_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="shared_bram_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="shared_bram_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="shared_bram_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="shared_bram_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="shared_bram_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="shared_bram_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="shared_bram_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="shared_bram_wrapper_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="shared_bram_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="shared_bram_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="shared_bram_wrapper_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="shared_bram_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="shared_bram_wrapper.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="shared_bram_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="shared_bram_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="shared_bram_wrapper_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="shared_bram_wrapper_timing_summary_init.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="shared_bram_wrapper_bus_skew_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="shared_bram_wrapper_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="shared_bram_wrapper_bus_skew_routed.pb"/>
+  <File Type="PA-TCL" Name="shared_bram_wrapper.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/shared_bram/shared_bram.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/shared_bram/hdl/shared_bram_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="shared_bram_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="shared_bram_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="shared_bram_lmb_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="shared_bram_axi_bram_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="shared_bram_dlmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="shared_bram_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="shared_bram_mdm_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="shared_bram_ilmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="shared_bram_dlmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="shared_bram_ilmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="shared_bram_rst_ps7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="shared_bram_blk_mem_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="shared_bram_microblaze_0_0"/>
+</GenRun>

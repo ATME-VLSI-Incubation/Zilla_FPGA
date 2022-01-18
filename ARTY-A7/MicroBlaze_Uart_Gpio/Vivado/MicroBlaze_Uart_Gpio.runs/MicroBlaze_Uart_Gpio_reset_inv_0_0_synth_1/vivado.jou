@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Jan 18 21:00:39 2022
+# Process ID: 16352
+# Current directory: D:/FPGA_Projects/MicroBlaze_Uart_Gpio/MicroBlaze_Uart_Gpio.runs/MicroBlaze_Uart_Gpio_reset_inv_0_0_synth_1
+# Command line: vivado.exe -log MicroBlaze_Uart_Gpio_reset_inv_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MicroBlaze_Uart_Gpio_reset_inv_0_0.tcl
+# Log file: D:/FPGA_Projects/MicroBlaze_Uart_Gpio/MicroBlaze_Uart_Gpio.runs/MicroBlaze_Uart_Gpio_reset_inv_0_0_synth_1/MicroBlaze_Uart_Gpio_reset_inv_0_0.vds
+# Journal file: D:/FPGA_Projects/MicroBlaze_Uart_Gpio/MicroBlaze_Uart_Gpio.runs/MicroBlaze_Uart_Gpio_reset_inv_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source MicroBlaze_Uart_Gpio_reset_inv_0_0.tcl -notrace

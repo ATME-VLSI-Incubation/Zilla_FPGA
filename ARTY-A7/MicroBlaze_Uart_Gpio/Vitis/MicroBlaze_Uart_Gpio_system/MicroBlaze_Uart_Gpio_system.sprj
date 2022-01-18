@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<systemproject:SystemProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" xmlns:systemproject="http://www.xilinx.com/systemproject" name="MicroBlaze_Uart_Gpio_system" platform="D:/FPGA_Projects/Workspace/MicroBlaze_Uart_Gpio_wrapper/export/MicroBlaze_Uart_Gpio_wrapper/MicroBlaze_Uart_Gpio_wrapper.xpfm" platformUID="xilinx:arty-a7-100::0.0(custom)" sysConfig="MicroBlaze_Uart_Gpio_wrapper" runtime="cpp" rootFSLocation="" linuxImage="" sysroot="">
+  <configuration name="Debug">
+    <configBuildOptions xsi:type="systemproject:SystemOptions">
+      <applications name="MicroBlaze_Uart_Gpio" domainName="domain_microblaze_0" domainPrettyName="domain_microblaze_0" appBuildConfig="Debug"/>
+      <options xsi:type="sdkproject:SdkOptions" generateSdCard="true"/>
+    </configBuildOptions>
+  </configuration>
+  <configuration name="Release">
+    <configBuildOptions xsi:type="systemproject:SystemOptions">
+      <applications name="MicroBlaze_Uart_Gpio" domainName="domain_microblaze_0" domainPrettyName="domain_microblaze_0" appBuildConfig="Release"/>
+      <options xsi:type="sdkproject:SdkOptions" generateSdCard="true"/>
+    </configBuildOptions>
+  </configuration>
+</systemproject:SystemProject>

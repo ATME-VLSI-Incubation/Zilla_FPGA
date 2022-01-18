@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1642410192">
+  <File Type="PA-TCL" Name="arty_uart_calculator_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="arty_uart_calculator_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="arty_uart_calculator_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="arty_uart_calculator_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="arty_uart_calculator_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="arty_uart_calculator_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="arty_uart_calculator_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="arty_uart_calculator_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="arty_uart_calculator_wrapper_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/arty_uart_calculator/arty_uart_calculator.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/arty_uart_calculator/hdl/arty_uart_calculator_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="arty_uart_calculator_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_3">
+    <File Path="$PSRCDIR/constrs_3/new/constraint.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_3/new/constraint.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="arty_uart_calculator_dlmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="arty_uart_calculator_rst_clk_wiz_1_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="arty_uart_calculator_axi_uartlite_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="arty_uart_calculator_lmb_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="arty_uart_calculator_microblaze_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="arty_uart_calculator_microblaze_0_axi_intc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="arty_uart_calculator_ilmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="arty_uart_calculator_ilmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="arty_uart_calculator_mdm_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="arty_uart_calculator_dlmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="arty_uart_calculator_clk_wiz_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="arty_uart_calculator_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="arty_uart_calculator_reset_inv_0_0"/>
+</GenRun>

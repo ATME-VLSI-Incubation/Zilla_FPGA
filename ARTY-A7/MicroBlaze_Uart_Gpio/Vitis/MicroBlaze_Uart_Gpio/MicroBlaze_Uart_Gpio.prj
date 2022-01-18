@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="MicroBlaze_Uart_Gpio" location="D:/FPGA_Projects/Workspace/MicroBlaze_Uart_Gpio" platform="D:/FPGA_Projects/Workspace/MicroBlaze_Uart_Gpio_wrapper/export/MicroBlaze_Uart_Gpio_wrapper/MicroBlaze_Uart_Gpio_wrapper.xpfm" platformUID="xilinx:arty-a7-100::0.0(custom)" systemProject="MicroBlaze_Uart_Gpio_system" sysConfig="MicroBlaze_Uart_Gpio_wrapper" runtime="cpp" cpu="domain_microblaze_0" cpuInstance="microblaze_0" os="standalone" mssSignature="297fe02b163c924e7b70bab19eeb2438">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.2082763169">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.134792976" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

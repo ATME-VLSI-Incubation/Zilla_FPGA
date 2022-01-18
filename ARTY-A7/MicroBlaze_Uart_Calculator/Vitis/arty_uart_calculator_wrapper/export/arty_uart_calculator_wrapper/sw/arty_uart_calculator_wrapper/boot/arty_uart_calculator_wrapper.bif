@@ -1,0 +1,6 @@
+/*arty_uart_calculator_wrapper*/
+the_ROM_image:
+{
+   <bitstream> 
+   <elf> 
+}

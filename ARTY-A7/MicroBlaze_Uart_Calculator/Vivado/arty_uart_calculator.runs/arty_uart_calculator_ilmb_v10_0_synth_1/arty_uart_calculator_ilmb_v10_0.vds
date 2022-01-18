@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Jan 17 14:07:48 2022
+# Process ID: 15820
+# Current directory: D:/FPGA_Projects/arty_uart_calculator/arty_uart_calculator.runs/arty_uart_calculator_ilmb_v10_0_synth_1
+# Command line: vivado.exe -log arty_uart_calculator_ilmb_v10_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source arty_uart_calculator_ilmb_v10_0.tcl
+# Log file: D:/FPGA_Projects/arty_uart_calculator/arty_uart_calculator.runs/arty_uart_calculator_ilmb_v10_0_synth_1/arty_uart_calculator_ilmb_v10_0.vds
+# Journal file: D:/FPGA_Projects/arty_uart_calculator/arty_uart_calculator.runs/arty_uart_calculator_ilmb_v10_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source arty_uart_calculator_ilmb_v10_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/vybha/Documents/AT472-BU-98000-r0p1-00rel0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.1/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP arty_uart_calculator_ilmb_v10_0, cache-ID = 9522a04588b34e5e.
+INFO: [Common 17-206] Exiting Vivado at Mon Jan 17 14:07:59 2022...

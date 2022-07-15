@@ -54,8 +54,7 @@ module apb_slave_dmreg_top
 		output 		haltreq									,
 		output  	transfer_reg 							,
 		output 		postexec 								,
-		output 		[2:0] cmderr							,
-		output 		[31:0] command_reg						,
+		output 		[2:0] cmderr							,	
 		output 		debug_reg_write_enable 					,
 		output 		[7:0] cmdtype							,
 		output 		debug_reg_read_enable					,
@@ -67,15 +66,20 @@ module apb_slave_dmreg_top
         output      [CORE_DATA_WIDTH-1:0]debug_mem_read_addr,
         output      [CORE_DATA_WIDTH-1:0]debug_mem_write_addr,
         output      [CORE_DATA_WIDTH-1:0]debug_mem_write_data ,
-        output      [(CORE_DATA_WIDTH>>3)-1:0] debug_mem_strobe                  
+        output      [(CORE_DATA_WIDTH>>3)-1:0] debug_mem_strobe               ,
+        output [DATA_WIDTH-1:0] dmcontrol_reg			    ,
+        output 		[DATA_WIDTH-1:0] dmstatus_reg		    ,	// Debug module status register
+		output 		[DATA_WIDTH-1:0] abstractcs_reg		    ,	// Abstract command and status register
+        output 		[31:0] command_reg						
+
                                                             );
 		
 		// declaration of wires
 		
-		wire 		[DATA_WIDTH-1:0] dmstatus_reg			;
+		//wire 		[DATA_WIDTH-1:0] dmstatus_reg			;
 		wire 		[DATA_WIDTH-1:0] hartinfo_reg			;
-		wire		[DATA_WIDTH-1:0] abstractcs_reg			;
-		wire  		[DATA_WIDTH-1:0] dmcontrol_reg			;
+		//wire		[DATA_WIDTH-1:0] abstractcs_reg			;
+		//wire  		[DATA_WIDTH-1:0] dmcontrol_reg			;
 		wire 		[DATA_WIDTH-1:0] data0_reg				;
 		wire  		[DATA_WIDTH-1:0] data1_reg				;
 		wire 		[DATA_WIDTH-1:0] data2_reg				;
@@ -170,7 +174,7 @@ module apb_slave_dmreg_top
 					.clrresethaltreq(clrresethaltreq)		,
 					.setresethaltreq(setresethaltreq)		,
 					.hartreset(hartreset)					,
-					.resumereq(resumereq)					,
+					.resumereq_o(resumereq)					,
 					.haltreq(haltreq)						,
 					.transfer_reg(transfer_reg)				,
 					.postexec(postexec)						,

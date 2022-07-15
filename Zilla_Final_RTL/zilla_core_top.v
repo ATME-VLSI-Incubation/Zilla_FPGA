@@ -150,13 +150,25 @@ output invalid_instr_valid_w,
 output interrupt_valid_w,
 output dbg_halt_req_w,
 output dbg_resume_req_w,
-output [DATA_WIDTH-1       :0] 	ld_sd_addr		 ,
 output [DATA_WIDTH-1:0]       data_mem_addr_o	   ,
-output [31:0]                       product_out     ,
-output                              product_valid_o,
-output [31:0]                       mult_op1,
-output [31:0]                       mult_op2,
-output                              mult_en_r2
+output [DATA_WIDTH-1:0] dmcontrol_reg		,
+output 		[DATA_WIDTH-1:0] dmstatus_reg		    ,	// Debug module status register
+output 		[DATA_WIDTH-1:0] abstractcs_reg		    ,	// Abstract command and status register
+output 		[31:0]           command_reg	,
+output  [DATA_WIDTH-1     :0]     debug_mem_read_data             , 
+output                            debug_mem_read_enable           ,
+output [DATA_WIDTH-1      :0]     debug_mem_read_addr        ,
+output                            debug_mem_write_enable          , 
+output [DATA_WIDTH-1      :0]     debug_mem_write_addr             ,
+output [DATA_WIDTH-1      :0]     debug_mem_write_data             ,
+output [(DATA_WIDTH>>3)-1 :0]     debug_mem_strobe               ,
+output                            debug_mem_read_valid            
+
+
+
+
+
+
 
 
 /*output [DATA_WIDTH-1:0] 	    gpr_15_out		,
@@ -181,6 +193,14 @@ output [DATA_WIDTH-1:0] 	    gpr_t4_out*/
 
 
 );
+wire [31:0]                       product_out       ;
+wire                              product_valid_o   ;
+wire [31:0]                       mult_op1          ;
+wire [31:0]                       mult_op2          ;
+wire                              mult_en_r2        ;
+wire  [DATA_WIDTH-1       :0] 	ld_sd_addr		 ;
+
+
 /////////////////////////////////////////////////////////////////////////////////
 wire [DATA_WIDTH-1:0]        data_mem_read_addr		;
 wire [DATA_WIDTH-1:0] 	    gpr_15_out;
@@ -408,14 +428,15 @@ reg                             debug_reg_read_data_valid       ;
 wire                            dbg_mode_exception              ;
 assign dbg_mode_exception = ( exception_valid_w && debug_mode_valid_w )  ? 1'b1 : 1'b0 ;
 
-wire  [DATA_WIDTH-1     :0]     debug_mem_read_data             ; 
-wire                            debug_mem_read_enable           ; 
-wire                            debug_mem_write_enable          ; 
-wire [DATA_WIDTH-1      :0]     debug_mem_read_addr             ; 
-wire [DATA_WIDTH-1      :0]     debug_mem_write_addr            ; 
-wire [DATA_WIDTH-1      :0]     debug_mem_write_data            ; 
-wire [(DATA_WIDTH>>3)-1 :0]     debug_mem_strobe                ;
-wire                            debug_mem_read_valid            ;
+//wire  [DATA_WIDTH-1     :0]     debug_mem_read_data             ; 
+//wire                            debug_mem_read_enable           ;
+//wire [DATA_WIDTH-1      :0]     debug_mem_read_addr             ; 
+
+//wire                            debug_mem_write_enable          ; 
+//wire [DATA_WIDTH-1      :0]     debug_mem_write_addr            ; 
+//wire [DATA_WIDTH-1      :0]     debug_mem_write_data            ; 
+//wire [(DATA_WIDTH>>3)-1 :0]     debug_mem_strobe                ;
+//wire                            debug_mem_read_valid            ;
 wire                            debug_exception_valid_w         ;
 wire                            mem_addr_invalid_w              ;
 wire                            debug_instr_mem_read_data_valid ;
@@ -435,7 +456,7 @@ assign DM_ARPROT = 3'b000;
 assign dm_addr_strobe = lmb_mem_write_en|| lmb_mem_read_en ;
 assign im_addr_strobe = z_im_read_en_o  || z_im_write_en_o;
 assign pc_out = instruction_read_addr_w;
-assign data_mem_addr_o = data_mem_write_addr;
+assign data_mem_addr_o = data_mem_read_en ? data_mem_read_addr : data_mem_write_addr;
 
 assign 		zic_mmr_write_data_w 			= store_data_r[31:0] 	;
 assign 		global_interrupt_enable_w 		= {48{mstatus_mie_w}}	;
@@ -607,7 +628,12 @@ dtm_to_dm_inst
 .debug_mem_write_addr           (debug_mem_write_addr       ),
 .debug_mem_write_data           (debug_mem_write_data       ),
 .debug_mem_strobe               (debug_mem_strobe           ),
-.debug_mem_read_valid           (debug_mem_read_valid       )
+.debug_mem_read_valid           (debug_mem_read_valid       ),
+.dmcontrol_reg                  (dmcontrol_reg),
+.dmstatus_reg                   (dmstatus_reg    ),    		    
+.abstractcs_reg	                (abstractcs_reg	 ),	    
+.command_reg	                (command_reg	 )	
+
 );	
 
  	                                                  

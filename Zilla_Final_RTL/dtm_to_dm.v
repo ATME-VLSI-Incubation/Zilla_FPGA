@@ -73,7 +73,13 @@ module dtm_to_dm
         output          [CORE_DATA_WIDTH-1:0]debug_mem_read_addr   ,
         output          [CORE_DATA_WIDTH-1:0]debug_mem_write_addr  ,
         output          [CORE_DATA_WIDTH-1:0]debug_mem_write_data  ,
-        output          [(CORE_DATA_WIDTH>>3)-1:0] debug_mem_strobe         
+        output          [(CORE_DATA_WIDTH>>3)-1:0] debug_mem_strobe    ,
+        output [DATA_WIDTH-1:0] dmcontrol_reg	,
+        output 		[DATA_WIDTH-1:0] dmstatus_reg		    ,	// Debug module status register
+		output 		[DATA_WIDTH-1:0] abstractcs_reg		    ,	// Abstract command and status register
+        output 		[31:0] command_reg						
+
+
 
 				
 												   );	
@@ -89,7 +95,7 @@ module dtm_to_dm
 		wire 		    [ADDR_WIDTH-1 :0] paddr 	;
 		wire 			transfer_reg 				;
 		wire 			postexec					;
-		wire 			[DATA_WIDTH-1:0] command_reg;
+	//	wire 			[DATA_WIDTH-1:0] command_reg;
 		wire 			[2:0] cmderr 				;
 		wire 			dmactive					;
 		wire 			busy 						;
@@ -191,7 +197,12 @@ module dtm_to_dm
         .debug_mem_read_addr(debug_mem_read_addr),
         .debug_mem_write_addr(debug_mem_write_addr),
         .debug_mem_write_data(debug_mem_write_data),
-        .debug_mem_strobe(debug_mem_strobe)
+        .debug_mem_strobe(debug_mem_strobe),
+        .dmcontrol_reg(dmcontrol_reg),
+.dmstatus_reg                   (dmstatus_reg    ),    		    
+.abstractcs_reg	                (abstractcs_reg	 )    
+
+
 
 
 		

@@ -87,7 +87,7 @@ module dm_register_file
 		output  	clrresethaltreq						,	// Debug module control 2nd bit register
 		output  	setresethaltreq						,	// Debug module control 3th bit register
 		output  	hartreset							,	// Debug module control 29th bit register
-		output  	resumereq							,	// Debug module control 30th bit register
+		output  	resumereq_o							,	// Debug module control 30th bit register
 		output  	haltreq								,	// Debug module control 31th bit register
 		output 		ndmreset							,
 		output	 	transfer_reg						,	// Abstract command 17th bit register
@@ -121,6 +121,24 @@ module dm_register_file
       //  wire        aampostincr_done                    ;
       //  wire        cmd_clr                             ;
 													   		
+wire resumereq;
+        reg resumereq_r;
+        
+assign resumereq_o = (resumereq && (!resumereq_r));
+
+        always@(posedge pclock or negedge presetn)
+        begin
+            if(!presetn)
+            begin
+                resumereq_r <= 1'b0;
+            end
+            else
+            begin
+                resumereq_r <= resumereq;
+            end
+        end
+
+
 		// Abstract control and status register
 		
 		assign 	cmderr = abstractcs_reg[10:8]			;
@@ -358,7 +376,7 @@ data_reg01
 					.ndmreset(ndmreset)					,
 					.ackhavereset(ackhavereset)			,
 					.ackunavail(ackunavail)				,
-					.resumereq(resumereq)				,
+					.resumereq(resumereq_o)				,
 					.halted(halted)						,
 					.running(running)					,
                     .h_reset(h_reset)                   ,
@@ -1174,6 +1192,8 @@ module dmstatus
         reg confstrptrvalid;
         reg [3:0] version;
         reg valid ;
+        reg resumereq_r;
+
 
 
 		always@(posedge pclock or negedge presetn )
@@ -1198,6 +1218,8 @@ module dmstatus
 					hasresethaltreq <= 1'b1;
 					confstrptrvalid <= 1'b0;
                     version[3:0] <= 4'b0;
+                    resumereq_r <= 1'b0;
+
 				end
                 else if (!dmactive)
                 begin
@@ -1217,6 +1239,8 @@ module dmstatus
 					hasresethaltreq <= 1'b1;
 					confstrptrvalid <= 1'b0;
                     version[3:0] <= 4'b0;
+                    resumereq_r <= 1'b0;
+
 
                 end
 			else
@@ -1236,7 +1260,8 @@ module dmstatus
 				    authbusy 	<= 1'b0;								
 				    hasresethaltreq 	<= 1'b1;								
 				    confstrptrvalid 	<= 1'b0;								
-				    version[3:0] 	<= 4'b0011;							
+				    version[3:0] 	<= 4'b0011;	
+                    resumereq_r <= resumereq;
 				end
 		end
 	always@(posedge pclock or negedge presetn )
@@ -1326,7 +1351,7 @@ module dmstatus
                             anyresumeack <= 1'b0;
                             valid <= 1'b0 ;
 						end
-					else if(resumereq && running && valid)
+					else if(resumereq_r && running && valid)
 						begin
                             allresumeack <= 1'b1;
                             anyresumeack <= 1'b1;

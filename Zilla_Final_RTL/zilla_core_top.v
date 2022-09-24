@@ -30,7 +30,6 @@ input 		                    risc_clk			    , //gllobal clock
 input		               risc_rst_i	        , //global reset
 input                          locked                   , //clock valid signal from fpga clock divider block
 //output	 	                    data_mem_write_en		, //data memory write enable 
-output  [DATA_WIDTH-1:0] 	    data_mem_write_addr		, //data memory write address
 //output  [DATA_WIDTH-1:0] 	    data_mem_write_data		, //data memory write address
 //output 		                    data_mem_read_en		, //data memory read enable
 //output  [DATA_WIDTH-1:0]        data_mem_read_addr		, //data memory read address
@@ -39,6 +38,7 @@ output  [DATA_WIDTH-1:0] 	    data_mem_write_addr		, //data memory write address
 
 //output		                    carry				    , //carry flag 
 //output		                    zero		 		    ,  //zero flag  
+
 output  		            lmb_mem_write_en		,	
 output                      lmb_mem_read_en		,
 output  [3:0] 	      		lmb_mem_strobe		,
@@ -138,17 +138,52 @@ input 			               ilmb_ready	            ,
 input 			               ilmb_rst		            ,
 input 			               ilmb_ue		            ,
 input 			               ilmb_wait	            ,
-output 			               im_addr_strobe	       ,
+output 			               im_addr_strobe	     ,
+output  [DATA_WIDTH-1:0] uart_mem_read_data,
+output [DATA_WIDTH-1:0] 	    gpr_a4_out,			
+output [DATA_WIDTH-1:0] 	    gpr_a5_out		,
+output [DATA_WIDTH-1       :0]	reg_write_data	,
+output [19:0] 				pc_out,
+output  [INSTRUCTION_WIDTH-1:0] 	de_instruction_w	 ,
+output [DATA_WIDTH-1       :0] 	mem_out		,
+//output [GPR_ADDR_WIDTH-1   :0] 	rd			        ,
+output [GPR_ADDR_WIDTH-1   :0] 	mem_wb_rd,		    
+output [DATA_WIDTH-1:0] 	    gpr_a0_out		,
+output [4:0] 		uart_rd		,
+output		uart_rd_valid	,
+output mem_wb_reg_wr_en,
+output  		                    mem_rd_en		,    
+output  		                    id_ex_mem_rd_en	,	
+output  		                    ex_mem_mem_rd_en,	
+output  		                    mem_wb_mem_rd_en,
+output 		                    reg_wr_en		    ,
+output  		                    id_ex_reg_wr_en 	,
+output  		                    ex_mem_reg_wr_en 	,
+output                              uart_valid,
+output                          r_ex_mem_reg_wr_en,
+output                          uart_mem_read_en,
+output stall_pipeline,
+output stall_en,
+output uart_read_stall
+
+
+
+
+
+
+
+
+//output  [DATA_WIDTH-1:0] 	    data_mem_write_addr		, //data memory write address
 ////////////////ports for ILA FPGA ///////////////////////
-output  [INSTRUCTION_WIDTH-1:0] 	if_instruction_w	            ,//from instruction memory to program control
+/*output  [INSTRUCTION_WIDTH-1:0] 	if_instruction_w	            ,//from instruction memory to program control
 output  [INSTRUCTION_WIDTH-1:0] 	de_instruction_w	            ,//from program control block to decode
 output [19:0] 				pc_out,
 output [PC_WIDTH-1         :0]    dpc_w       ,
 output [7:0] 	                    exception_id_w				,
 output exception_valid_w		,
 output invalid_instr_valid_w,
-output interrupt_valid_w,
-output dbg_halt_req_w,
+output interrupt_valid_w*/
+/*output dbg_halt_req_w,
 output dbg_resume_req_w,
 output [DATA_WIDTH-1:0]       data_mem_addr_o	   ,
 output [DATA_WIDTH-1:0] dmcontrol_reg		,
@@ -162,7 +197,7 @@ output                            debug_mem_write_enable          ,
 output [DATA_WIDTH-1      :0]     debug_mem_write_addr             ,
 output [DATA_WIDTH-1      :0]     debug_mem_write_data             ,
 output [(DATA_WIDTH>>3)-1 :0]     debug_mem_strobe               ,
-output                            debug_mem_read_valid            
+output                            debug_mem_read_valid   */         
 
 
 
@@ -193,6 +228,33 @@ output [DATA_WIDTH-1:0] 	    gpr_t4_out*/
 
 
 );
+
+///////////////////////////////////////////////////////////////////////////////////
+wire  [INSTRUCTION_WIDTH-1:0] 	if_instruction_w	            ;//from instruction memory to program control
+//wire  [INSTRUCTION_WIDTH-1:0] 	de_instruction_w	            ;//from program control block to decode
+//wire [19:0] 				pc_out;
+wire [PC_WIDTH-1         :0]    dpc_w       ;
+wire [7:0] 	                    exception_id_w				;
+wire exception_valid_w		;
+wire invalid_instr_valid_w;
+wire interrupt_valid_w;
+wire dbg_halt_req_w;
+wire dbg_resume_req_w;
+wire [DATA_WIDTH-1:0]       data_mem_addr_o	   ;
+wire [DATA_WIDTH-1:0] dmcontrol_reg		;
+wire 		[DATA_WIDTH-1:0] dmstatus_reg		    ;	// Debug module status register
+wire 		[DATA_WIDTH-1:0] abstractcs_reg		    ;	// Abstract command and status register
+wire 		[31:0]           command_reg	;
+wire  [DATA_WIDTH-1     :0]     debug_mem_read_data            ;
+wire                            debug_mem_read_enable          ;
+wire [DATA_WIDTH-1      :0]     debug_mem_read_addr        ;
+wire                            debug_mem_write_enable          ;
+wire [DATA_WIDTH-1      :0]     debug_mem_write_addr             ;
+wire [DATA_WIDTH-1      :0]     debug_mem_write_data             ;
+wire [(DATA_WIDTH>>3)-1 :0]     debug_mem_strobe              ;
+wire                            debug_mem_read_valid   ;         
+wire  [DATA_WIDTH-1:0] 	    data_mem_write_addr	;
+//////////////////////////////////////////////////////////////
 wire [31:0]                       product_out       ;
 wire                              product_valid_o   ;
 wire [31:0]                       mult_op1          ;
@@ -204,12 +266,12 @@ wire  [DATA_WIDTH-1       :0] 	ld_sd_addr		 ;
 /////////////////////////////////////////////////////////////////////////////////
 wire [DATA_WIDTH-1:0]        data_mem_read_addr		;
 wire [DATA_WIDTH-1:0] 	    gpr_15_out;
-wire [DATA_WIDTH-1:0] 	    gpr_a0_out;			
+//wire [DATA_WIDTH-1:0] 	    gpr_a0_out;			
 wire [DATA_WIDTH-1:0] 	    gpr_a1_out;			
 wire [DATA_WIDTH-1:0] 	    gpr_a2_out;			
 wire [DATA_WIDTH-1:0] 	    gpr_a3_out;			
-wire [DATA_WIDTH-1:0] 	    gpr_a4_out;			
-wire [DATA_WIDTH-1:0] 	    gpr_a5_out;			
+//wire [DATA_WIDTH-1:0] 	    gpr_a4_out;			
+//wire [DATA_WIDTH-1:0] 	    gpr_a5_out;			
 wire [DATA_WIDTH-1:0] 	    gpr_s0_out;			
 wire [DATA_WIDTH-1:0] 	    gpr_ra_out;			
 wire [DATA_WIDTH-1:0] 	    gpr_sp_out;
@@ -229,14 +291,14 @@ wire [DATA_WIDTH-1:0]       data_mem_read_data         ; //data memory read data
 wire [(DATA_WIDTH>>3)-1:0]  data_mem_strobe	       ;
 
 wire 		      uart_mem_write_en		;	
-wire                  uart_mem_read_en		;
+//wire                  uart_mem_read_en		;
 wire [3:0] 	      uart_mem_strobe		;
 wire [DATA_WIDTH-1:0] uart_mem_addr_o		;
 //wire [DATA_WIDTH-1:0] uart_mem_addr_o		;
 wire [DATA_WIDTH-1:0] uart_mem_write_data	;	
-wire [DATA_WIDTH-1:0] uart_mem_read_data	;
-wire [4:0] 		uart_rd		;
-wire 			uart_rd_valid	;
+//wire [DATA_WIDTH-1:0] uart_mem_read_data	;
+//wire [4:0] 		uart_rd		;
+//wire 			uart_rd_valid	;
 wire [DATA_WIDTH-1:0] 	uart_data	;
 
 
@@ -258,7 +320,7 @@ wire [OPCODE-1           :0]	opcode			    ; //conditional branch
 wire [FUNC3-1            :0]	func3			    ; //conditional branch
 wire [INSTRUCTION_WIDTH-1:0] 	instruction		    ;
 reg  [INSTRUCTION_WIDTH-1:0] 	if_id_instruction	;
-wire 	    	                stall_pipeline		;
+//wire 	    	                stall_pipeline		;
 wire [DATA_WIDTH-1       :0] 	reg_write_data_1	;
 wire [PC_WIDTH-1         :0]    if_id_pc		    ;
 wire [PC_WIDTH-1         :0]    id_ex_pc		    ;
@@ -267,25 +329,27 @@ wire [(DATA_WIDTH>>3)-1  :0] 	byte_en			    ;
 //////////////////////////////////////////////////////////////////
 //		destination register 
 //////////////////////////////////////////////////////////////////
+//
+//
 wire [GPR_ADDR_WIDTH-1   :0] 	rd			        ;
 wire [GPR_ADDR_WIDTH-1   :0] 	id_ex_rd		    ;
 wire [GPR_ADDR_WIDTH-1   :0] 	ex_mem_rd		    ;
-wire [GPR_ADDR_WIDTH-1   :0] 	mem_wb_rd		    ;
-wire 		                    stall_en		    ;//26/05
+//wire [GPR_ADDR_WIDTH-1   :0] 	mem_wb_rd		    ;
+//wire 		                    stall_en		    ;//26/05
 ////////////////////////////////////////////////////////////////
 //		register write enable
 ////////////////////////////////////////////////////////////////
-wire 		                    reg_wr_en		    ;
-wire  		                    id_ex_reg_wr_en 	;
-wire  		                    ex_mem_reg_wr_en 	;
-wire  		                    mem_wb_reg_wr_en 	;
+//wire 		                    reg_wr_en		    ;
+//wire  		                    id_ex_reg_wr_en 	;
+//wire  		                    ex_mem_reg_wr_en 	;
+//wire  		                    mem_wb_reg_wr_en 	;
 /////////////////////////////////////////////////////////////////
 //		memory read enable
 /////////////////////////////////////////////////////////////////
-wire  		                    mem_rd_en		    ;
-wire  		                    id_ex_mem_rd_en		;
-wire  		                    ex_mem_mem_rd_en	;
-wire  		                    mem_wb_mem_rd_en	;
+//wire  		                    mem_rd_en		    ;
+//wire  		                    id_ex_mem_rd_en		;
+//wire  		                    ex_mem_mem_rd_en	;
+//wire  		                    mem_wb_mem_rd_en	;
 /////////////////////////////////////////////////////////////////
 //		memory write enable
 //////////////////////////////////////////////////////////////////
@@ -306,9 +370,9 @@ wire [DATA_WIDTH-1       :0] 	addr_gen_rs1_data	            ;// rs1_data_r	to ld
 //wire [DATA_WIDTH-1       :0] 	ld_sd_addr		                ; // to execution stage
 wire [DATA_WIDTH-1       :0]	mem_addr		                ; // memory address	
 wire [DATA_WIDTH-1       :0]	store_data		                ; // rs2_data_mem_acs; //store instruction data
-wire [DATA_WIDTH-1       :0] 	mem_out			                ; // mem_to_reg_data	; //data read from memory 
+//wire [DATA_WIDTH-1       :0] 	mem_out			                ; // mem_to_reg_data	; //data read from memory 
 reg  [DATA_WIDTH-1       :0]	reg_wr_data		                ; // alu output pipelined in mem access stage
-wire [DATA_WIDTH-1       :0]	reg_write_data		            ;
+//wire [DATA_WIDTH-1       :0]	reg_write_data		            ;
 wire [DATA_WIDTH-1       :0]    rs1_data		                ; // from reg_file to alu
 wire [DATA_WIDTH-1       :0]	rs2_data		                ; // from reg_file to alu
 wire [DATA_WIDTH-1       :0] 	alu_out			                ; // alu output
@@ -526,8 +590,10 @@ axi_lmb_arbiter axi_lmb_arbiter_inst
 //.lmb_mem_addr_o	(lmb_mem_addr_o		),
 .lmb_mem_write_data_o	(lmb_mem_write_data	),
 .lmb_mem_read_data	(lmb_mem_read_data	),
-.data_mem_write_en_to_stall(data_mem_write_en_to_stall)
-
+.data_mem_write_en_to_stall(data_mem_write_en_to_stall),
+.uart_valid         (uart_valid),
+.uart_read_stall(uart_read_stall),
+.uart_rd_valid(uart_rd_valid)  
 );
 
 
@@ -953,7 +1019,7 @@ instr_decode #(
 .CSR_ADDR_WIDTH     (CSR_ADDR_WIDTH   )
 
 )
-instr_decode
+instr_decode_inst
 (
 .de_clk					    (risc_clk			            ),
 .de_rst					    (risc_rst_r			            ),
@@ -1057,7 +1123,10 @@ pipe_inst
 .rem_busy_i                     (rem_busy_w                 ),
 .mult_valid_i                  (mult_valid_w), 
 .div_valid_i                   (div_valid_w ), 
-.rem_valid_i                   (rem_valid_w ) 
+.rem_valid_i                   (rem_valid_w ),
+.uart_valid         (uart_valid),
+.r_ex_mem_reg_wr_en(r_ex_mem_reg_wr_en)
+
 
 
 );
@@ -1360,7 +1429,9 @@ load_hazard_ctrl_inst
 .rem_busy_i                 (rem_busy_w         ),
 .uart_mem_read_en(uart_mem_read_en),
 .dm_ar_valid_out (DM_AR_VALID_OUT),
-.data_mem_write_en_to_stall(data_mem_write_en_to_stall)
+.data_mem_write_en_to_stall(data_mem_write_en_to_stall),
+.uart_read_stall(uart_read_stall)
+
 
 /*.debug_mode_valid_i(debug_mode_valid_w  ),
 .debug_mode_reset_i(dbg_hart_only_rst_w ),
@@ -1582,7 +1653,7 @@ begin
                 debug_instr_mem_access_valid  = 0           ;
 
 		     end
-		    else if(mem_rd_addr_w >= 64'd163840 && mem_rd_addr_w <= 64'd311296)//data memory address range
+		    else if(mem_rd_addr_w >= 64'd163840 && mem_rd_addr_w <= 64'd376831)//data memory address range uart - d311296
 		        begin
 			    zic_mmr_valid                 = 1'b0        ;
 			    data_mem_data_rd_en           = mem_rd_en_w	;
@@ -1733,7 +1804,9 @@ input                   div_busy_i  ,
 input                   rem_busy_i  ,
 input                   mult_valid_i,
 input                   div_valid_i ,
-input                   rem_valid_i
+input                   rem_valid_i ,
+input                   uart_valid,
+output reg r_ex_mem_reg_wr_en
 
 
                
@@ -1833,6 +1906,7 @@ begin
                 csr_imm_valid_r         <= 1'b0;
                 csr_imm_data_r          <= {DATA_WIDTH{1'b0}};
                 div_rem_valid_r         <= 1'b0;
+                r_ex_mem_reg_wr_en      <= 1'b0;
 			
 	end
     else if(debug_mode_reset_i | debug_ndm_reset_i | wdt_reset_i )
@@ -1865,6 +1939,7 @@ begin
                 csr_rd_en_to_mux        <= 1'b0;
                 csr_imm_valid_r         <= 1'b0;
                 csr_imm_data_r          <= {DATA_WIDTH{1'b0}};
+                r_ex_mem_reg_wr_en <= 1'b0;
     end
 	else
 	begin
@@ -1873,7 +1948,7 @@ begin
 		        id_ex_rd  			    <= rd			        ;		
                 ex_mem_rd 			    <= id_ex_rd		        ;				 
                 id_ex_reg_wr_en 		<= reg_wr_en		    ;
-                ex_mem_reg_wr_en		<= id_ex_reg_wr_en	    ;				  
+               ex_mem_reg_wr_en		<= id_ex_reg_wr_en	    ;				  
                 id_ex_mem_rd_en 		<= mem_rd_en		    ;
                 ex_mem_mem_rd_en		<= id_ex_mem_rd_en	    ;
                 id_ex_mem_wr_en 		<= mem_wr_en		    ;
@@ -1894,6 +1969,14 @@ begin
                 ex_mem_csr_addr_o		<= id_ex_csr_addr	    ;	
                 csr_imm_valid_r         <= csr_imm_valid_i      ;
                 csr_imm_data_r          <= csr_imm_data_i       ;
+                if(uart_valid)
+                begin
+                    r_ex_mem_reg_wr_en		<= 1'b0	    ;	
+                end
+                else
+                begin
+                    r_ex_mem_reg_wr_en		<= id_ex_reg_wr_en	    ;	
+                end
 		end
       else if(div_oper )
         begin

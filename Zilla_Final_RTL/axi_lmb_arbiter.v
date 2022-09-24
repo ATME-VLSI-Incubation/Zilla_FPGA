@@ -29,7 +29,10 @@ output                  lmb_mem_read_en_o		,
 output [3:0] 	        lmb_mem_strobe_o		,
 output  [DATA_WIDTH-1:0] lmb_mem_addr_o		,
 output [DATA_WIDTH-1:0] lmb_mem_write_data_o	,
-output data_mem_write_en_to_stall
+output data_mem_write_en_to_stall,
+output reg uart_valid,
+output reg  uart_read_stall,
+input       uart_rd_valid  
 	
 );
 
@@ -43,6 +46,43 @@ reg                  lmb_mem_read_en		;
 reg [3:0] 	        lmb_mem_strobe		    ;
 reg [DATA_WIDTH-1:0] lmb_mem_addr	    ;
 reg [DATA_WIDTH-1:0] lmb_mem_write_data	    ;
+
+reg uart_mem_read_en_r;
+wire uart_mem_read_en_pos;
+
+always@(posedge clk or negedge rst)
+begin
+    if(!rst)
+    begin
+        uart_mem_read_en_r <= 1'b0;
+    end
+    else
+    begin
+        uart_mem_read_en_r <= uart_mem_read_en;
+    end
+end
+
+assign uart_mem_read_en_pos = (uart_mem_read_en && (!uart_mem_read_en_r) );
+
+always@(posedge clk or negedge rst)
+begin
+    if(!rst)
+    begin
+        uart_read_stall <= 1'b0;
+    end
+    else
+    begin
+        if(uart_mem_read_en_pos)
+        begin
+            uart_read_stall <= 1'b1;
+        end
+        else if(uart_rd_valid)
+        begin
+            uart_read_stall <= 1'b0;
+        end
+    end
+end
+
 
 
 read_modify_write 
@@ -76,7 +116,7 @@ read_modify_write_inst
 
 
 
-reg uart_valid;
+//reg uart_valid;
 reg lmb_valid;
 
 reg uart_valid_reg;

@@ -808,11 +808,14 @@ always@(posedge csr_clk or negedge csr_rst )
 begin
 	if(!csr_rst )
 	begin
-		data_mem_max_addr_o <= {{DATA_WIDTH-20{1'b0}},20'h4C000};//87fff{{DATA_WIDTH-20{1'b0}},20'h3ffff}
+		//data_mem_max_addr_o <= {{DATA_WIDTH-20{1'b0}},20'h4C000};//87fff{{DATA_WIDTH-20{1'b0}},20'h3ffff}
+        data_mem_max_addr_o <= {{DATA_WIDTH-20{1'b0}},20'h5Bfff};
 	end
     else if(dbg_ndm_reset_i | dbg_hart_reset_i | wdt_reset_i)
     begin
-        		data_mem_max_addr_o <= {{DATA_WIDTH-20{1'b0}},20'h4C000};
+        	//	data_mem_max_addr_o <= {{DATA_WIDTH-20{1'b0}},20'h4C000};
+            data_mem_max_addr_o <= {{DATA_WIDTH-20{1'b0}},20'h5Bfff};
+
     end
 	else
 	begin
